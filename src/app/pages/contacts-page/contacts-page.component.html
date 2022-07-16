@@ -1,0 +1,91 @@
+<h1 class="center mt-2">ROYAL-CRM</h1>
+
+<table class="table table-striped container mt-4">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">id</th>
+      <th scope="col">Full Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Birthday</th>
+      <th scope="col">Age</th>
+      <th scope="col">Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>{{ contacts[0].id }}</td>
+      <td>{{ contacts[0].firstName + " " + contacts[0].lastName }}</td>
+      <td>{{ contacts[0].email }}</td>
+      <td>{{ contacts[0].phone }}</td>
+      <td>
+        {{ contacts[0].birthDay }}
+      </td>
+      <td>{{ contacts[0].age }}</td>
+      <td>
+        {{ this.contacts[0].address?.city }}
+        {{ this.contacts[0].address?.street }}
+        {{ this.contacts[0].address?.houseNumber }}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>{{ contacts[1].id }}</td>
+      <td>{{ contacts[1].firstName + " " + contacts[1].lastName }}</td>
+      <td>{{ contacts[1].email }}</td>
+      <td>{{ contacts[1].phone }}</td>
+      <td>
+        {{ contacts[1].birthDay }}
+      </td>
+      <td>{{ contacts[1].age }}</td>
+      <td>
+        {{ this.contacts[1].address?.city }}
+        {{ this.contacts[1].address?.street }}
+        {{ this.contacts[1].address?.houseNumber }}
+      </td>
+    </tr>
+
+    <tr>
+      <th scope="row">3</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+    </tr>
+  </tbody>
+</table>
