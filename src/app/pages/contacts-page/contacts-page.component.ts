@@ -17,7 +17,7 @@ export class ContactsPageComponent {
       houseNumber: 25,
     },
     age: 30,
-    birthDay: new Date('10/11/1955 10:40:50 AM'),
+    birthDay: new Date('1995, 11, 17'),
     email: 'guy@gmail.com',
     firstName: 'Guy',
     lastName: 'Altman',
@@ -26,8 +26,8 @@ export class ContactsPageComponent {
   contact2: ContactsInterface = {
     id: '548795',
     address: {
-      country: 'israel',
-      city: 'tel-aviv',
+      country: 'Israel',
+      city: 'Tel-aviv',
       street: 'Alenbi',
       houseNumber: 87,
     },
