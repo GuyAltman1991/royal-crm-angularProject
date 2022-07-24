@@ -14,9 +14,30 @@ import { LeftNavBarLinksComponent } from './layout/header/left-nav-bar-links/lef
 import { RightNavBarLinksComponent } from './layout/header/right-nav-bar-links/right-nav-bar-links.component';
 import { DisplayUserConectedComponent } from './layout/header/right-nav-bar-links/display-user-conected/display-user-conected.component';
 import { DisplayUserDisconectedComponent } from './layout/header/right-nav-bar-links/display-user-disconected/display-user-disconected.component';
+import { PageHeaderComponent } from './components/page-header/page-header.component';
+import { NavLinkTopComponent } from './layout/header/nav-link-top/nav-link-top.component';
+import { RandomNumPipe } from './pipes/random-num.pipe';
+import { ParagraphCapitalPipe } from './pipes/paragraph-capital.pipe';
 
 @NgModule({
-  declarations: [AppComponent, ContactsPageComponent, FooterComponent, HeaderComponent, MainComponent, SideNavComponent, LogoComponent, HamburgerComponent, LeftNavBarLinksComponent, RightNavBarLinksComponent, DisplayUserConectedComponent, DisplayUserDisconectedComponent],
+  declarations: [
+    AppComponent,
+    ContactsPageComponent,
+    FooterComponent,
+    HeaderComponent,
+    MainComponent,
+    SideNavComponent,
+    LogoComponent,
+    HamburgerComponent,
+    LeftNavBarLinksComponent,
+    RightNavBarLinksComponent,
+    DisplayUserConectedComponent,
+    DisplayUserDisconectedComponent,
+    PageHeaderComponent,
+    NavLinkTopComponent,
+    RandomNumPipe,
+    ParagraphCapitalPipe,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
