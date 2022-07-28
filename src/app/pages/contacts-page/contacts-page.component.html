@@ -3,7 +3,10 @@
   subtitle="a customer page"
   icon="fas fa-users"
 ></app-page-header>
-<table class="table table-striped container mt-4">
+<table
+  *ngIf="contacts.length; else noContacts"
+  class="table table-striped container mt-4"
+>
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -17,78 +20,27 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>{{ contacts[0].id }}</td>
-      <td>{{ contacts[0].firstName + " " + contacts[0].lastName }}</td>
-      <td>{{ contacts[0].email }}</td>
-      <td>{{ contacts[0].phone }}</td>
+    <tr *ngFor="let contact of contacts; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ contact.id }}</td>
+      <td>{{ contact.firstName + " " + contacts[0].lastName }}</td>
+      <td>{{ contact.email }}</td>
+      <td>{{ contact.phone }}</td>
       <td>
-        {{ contacts[0].birthDay }}
+        {{ contact.birthDay | date: "mediumDate" }}
       </td>
-      <td>{{ contacts[0].age }}</td>
+      <td>{{ contact.age }}</td>
       <td>
-        {{ this.contacts[0].address?.city }}
-        {{ this.contacts[0].address?.street }}
-        {{ this.contacts[0].address?.houseNumber }}
+        {{ this.contact.address?.city }}
+        {{ this.contact.address?.street }}
+        {{ this.contact.address?.houseNumber }}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>{{ contacts[1].id }}</td>
-      <td>{{ contacts[1].firstName + " " + contacts[1].lastName }}</td>
-      <td>{{ contacts[1].email }}</td>
-      <td>{{ contacts[1].phone }}</td>
-      <td>
-        {{ contacts[1].birthDay }}
-      </td>
-      <td>{{ contacts[1].age }}</td>
-      <td>
-        {{ this.contacts[1].address?.city }}
-        {{ this.contacts[1].address?.street }}
-        {{ this.contacts[1].address?.houseNumber }}
-      </td>
-    </tr>
-
-    <tr>
-      <th scope="row">3</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
     </tr>
   </tbody>
 </table>
+
+<ng-template #noContacts>
+  <div>
+    {{ "opss... no contacts where found in the database!" | paragraphCapital }}
+  </div>
+</ng-template>

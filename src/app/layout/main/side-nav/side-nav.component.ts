@@ -1,16 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output } from '@angular/core';
 
 @Component({
   selector: 'app-side-nav',
   templateUrl: './side-nav.component.html',
-  styles: [
-  ]
+  styles: [],
 })
-export class SideNavComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class SideNavComponent {
+  links: Array<string> = ['costumers', 'contacts'];
+  constructor() {}
 }

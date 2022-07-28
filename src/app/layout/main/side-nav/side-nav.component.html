@@ -1,1 +1,7 @@
-<p>side-nav works!</p>
+<ul *ngIf="links.length; else noLinks">
+  <side-nav-link class="text-primary" *ngFor="let link of links; index as i">
+    {{ link }}
+  </side-nav-link>
+</ul>
+
+<ng-template #noLinks> there are no links!</ng-template>

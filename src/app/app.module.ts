@@ -18,6 +18,7 @@ import { PageHeaderComponent } from './components/page-header/page-header.compon
 import { NavLinkTopComponent } from './layout/header/nav-link-top/nav-link-top.component';
 import { RandomNumPipe } from './pipes/random-num.pipe';
 import { ParagraphCapitalPipe } from './pipes/paragraph-capital.pipe';
+import { SideNavLinkComponent } from './layout/main/side-nav/side-nav-link/side-nav-link.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ParagraphCapitalPipe } from './pipes/paragraph-capital.pipe';
     NavLinkTopComponent,
     RandomNumPipe,
     ParagraphCapitalPipe,
+    SideNavLinkComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
